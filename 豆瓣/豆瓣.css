@@ -1,0 +1,84 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a{
+  text-decoration: none;
+}
+li{
+  list-style: none;
+}
+body{
+  font-size: 12px;
+  line-height: 1.2;
+  position: relative;
+  
+}
+html,body{
+  height: 100%;
+}
+main{
+  height: calc(100vh - 50px);
+  overflow: scroll;
+  -webkit-overflow-scrolling: touch; /*ios 上增加弹性*/
+}
+footer{
+  position: absolute;
+  border-top: 1px solid #CCCCCC;
+  height: 50px;
+  width: 100%;
+  display: flex;
+  bottom:0;
+}
+footer>div{
+  flex: 1;
+  text-align: center;
+}
+footer>div>span{
+  display: block;
+  padding-top:4px;
+  cursor:pointer;
+}
+footer .active{
+  color:#FF5722;
+}
+main>section{
+  display: none;
+}
+main>section:first-child{
+  display: block;
+}
+.item {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+.item>a{
+  display: block;
+  display: flex;
+}
+.item .cover,
+.item .cover img{
+  width: 70px;
+}
+.item .detail {
+  flex: 1;
+  padding-left: 10px;
+}
+.item .detail h2{
+  font-size: 16px;
+  color: black;
+}
+.item .detail .extra{
+  color: #999;
+  margin-top: 4px;
+}
+.item .detail .score{
+  color: #FF5722;
+}
+.loading {
+  text-align: center;
+  padding-top: 10px;
+  display: none;
+}
