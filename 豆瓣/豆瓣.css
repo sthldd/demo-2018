@@ -82,3 +82,15 @@ main>section:first-child{
   padding-top: 10px;
   display: none;
 }
+.loading .iconfont{
+  animation: 1s rotate linear infinite;
+  display: inline-block;
+}
+@keyframes rotate{
+  0%{
+    transform:rotate(0deg);
+  }
+  100%{
+    transform:rotate(360deg);
+  }
+}
