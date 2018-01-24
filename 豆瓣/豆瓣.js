@@ -30,10 +30,17 @@ function start(){
         $('.loading').hide()
     })
  }
+
+ var clock 
 $('main').scroll(function(){
-    if($('section').eq(0).height() - 20 <= $('main').height() + $('main').scrollTop()){
-    start()    
+    if(clock){
+        clearTimeout(clock)
     }
+    clock = setTimeout(function(){
+        if($('section').eq(0).height() - 20 <= $('main').height() + $('main').scrollTop()){
+            start()    
+        }
+    },300)
 })
 
 function setData(data){
@@ -80,6 +87,8 @@ function setData(data){
       $('#top250').append($node)
     })
 }
+
+
 
 
 
