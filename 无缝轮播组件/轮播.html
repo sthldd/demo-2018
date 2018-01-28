@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="./jquery-3.2.1.min.js"></script>
+    <title>轮播</title>
+    <style>
+        *{margin:0;
+            padding:0;
+            box-sizing:border-box;
+          }
+          .window{
+            width: 400px;
+            height: 300px;
+            margin: 20px auto;
+            overflow: hidden;
+          }
+          .images{
+            position: relative;
+          }
+          .images > img{
+            width: 100%;
+            transition: all 1500ms;
+            position: absolute;
+            top: 0;
+          }
+          
+          .images > img.current{
+            left: 0;
+            transform: translateX(0);
+            z-index: 1;
+          }
+          .images > img.leave{
+            transform: translateX(-100%);
+            z-index: 1;
+          }
+          .images > img.enter{
+            transform: translateX(100%);
+          }
+    </style>
+</head>
+<body>
+    <div class="window">
+      <div class="images">
+        <img src="./1.jpg" alt="图片" width="400" height="300">
+        <img src="./2.jpg" alt="图片" width="400" height="300">
+        <img src="./3.jpg" alt="图片" width="400" height="300">
+        <img src="./4.jpg" alt="图片" width="400" height="300">
+        <img src="./5.jpg" alt="图片" width="400" height="300">
+    </div>
+  </div>    
+  <script>
+   //芳芳说一年程序员都写不出来，不过代码优化确实厉害。
+    
+   var n 
+   init()
+   setInterval(()=>{
+    makeLeave(getImage(n))
+      .one('transitionend', (e)=>{
+        makeEnter($(e.currentTarget))
+      })
+    makeCurrent(getImage(n+1))
+    n += 1
+  },3000)
+
+
+
+
+    function init(){
+      n = 1
+      $('.images > img:nth-child(1)').addClass('current')
+      .siblings().addClass('enter')
+    }
+    
+    function x(n){
+      if(n>5){
+        n = n%5
+        if (n===0){
+          n =5
+        }
+      } 
+      return n
+    }
+    function getImage(n){
+     return $(`.images > img:nth-child(${x(n)})`)
+   }
+
+    function makeLeave($node){
+    return $node.removeClass('current enter').addClass('leave')  
+   }
+   function makeCurrent($node){
+    return $node.removeClass('leave enter').addClass('current')  
+   }
+   function makeEnter($node){
+    return $node.removeClass('current leave').addClass('enter')  
+   }
+
+
+//一眼就能看懂版
+    
+    // $('.images > img:nth-child(1)').addClass('current')
+    // $('.images > img:nth-child(2)').addClass('enter')
+    // $('.images > img:nth-child(3)').addClass('enter')
+    // $('.images > img:nth-child(4)').addClass('enter')
+    // $('.images > img:nth-child(5)').addClass('enter')
+    // var n = 1
+    // setInterval(()=>{
+    //   $(`.images > img:nth-child(${x(n)})`).removeClass('current').addClass('leave')
+    //     .one('transitionend', (e)=>{
+    //       $(e.currentTarget).removeClass('leave').addClass('enter')
+    //     })
+    //   $(`.images > img:nth-child(${x(n+1)})`).removeClass('enter').addClass('current')
+    //   n += 1
+    // },3000)
+    
+    
+    // function x(n){
+    //   if(n>5){
+    //     n = n%5
+    //     if (n===0){
+    //       n =5
+    //     }
+    //   } 
+    //   return n
+    // }
+  
+  </script>
+</body>
+</html>
