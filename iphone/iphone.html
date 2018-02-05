@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>iphone slide</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      a {
+        text-decoration: none;
+      }
+
+      li {
+        list-style: none;
+      }
+      .window{
+        width: 920px;
+        height: 400px;
+        overflow: hidden;
+      }
+      #container{
+        border:1px solid #D9D9D9;
+        width: 922px;
+        height: 447px;
+        margin: 20px auto;
+      }
+      .images{
+        display: flex;
+        transition: all 0.5s;
+      }
+      .images > img{
+        width: 100%;
+      }
+     #foot{
+       width:920px;
+       margin: 0 auto;
+       height: 45px;
+       border: 1px solid #DFDFDF;
+       margin-bottom: 10px;
+      }
+      #foot>ul>li {
+        display: inline-block;
+        border: 1px solid #DCDBDB;
+        height: 45px;
+        width: 60px;
+        overflow: hidden;
+        padding-top: 10px;
+      }
+    #foot>ul{
+      text-align: center;
+      font-size: 0px;
+    }
+    .active{
+      background:red;
+    }
+    </style>
+  </head>
+
+  <body>
+    <div id="container">
+      <div class="window">
+      <div id="slides" class="images">
+        <img src="./macbook.jpg" alt="图片" width="920px" height="400px">
+        <img src="./iphone.jpg" alt="图片" width="920px" height="400px">
+        <img src="./imac.jpg" alt="图片" width="920px" height="400px">
+        <img src="./apple.jpg" alt="图片" width="920px" height="400px">
+      </div>
+    </div>
+      <div id="foot">
+        <ul>
+          <li class="active">
+            <img src="./macbook-icon.png" alt="" height="24px" width="24px">
+          </li>
+          <li>
+            <img src="./iphone-icon.png" alt="" height="24px" width="24px">
+          </li>
+          <li>
+            <img src="./imac-icon.png" alt="" height="24px" width="24px">
+          </li>
+          <li>
+            <img src="./apple-icon.png" alt="" height="24px" width="24px">
+          </li>
+        </ul>
+      </div>
+    </div>
+    <script src="./jquery-3.2.1.min.js"></script>
+    <script src="./apple.js"></script>
+  </body>
+
+</html>
