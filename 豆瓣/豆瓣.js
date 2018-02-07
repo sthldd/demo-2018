@@ -12,7 +12,7 @@ function start(){
     isLoading = true
     $('.loading').show()
     $.ajax({
-        url:'https://api.douban.com/v2/movie/top250',
+        url:'//api.douban.com/v2/movie/top250',
         type:'GET',
         data:{
             start:index,
