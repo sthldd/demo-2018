@@ -347,10 +347,7 @@ section.portfolio .jobs{
   position: relative;
   height: 597px;
 }
-section.portfolio .jobs>.big,
-section.portfolio .jobs>.small{
-  position: absolute;
-}
+
 .topNavBar.sticky{
   background:white;
   box-shadow: 0px 4px 13px 0px rgba(0, 0, 0, 0.5);
