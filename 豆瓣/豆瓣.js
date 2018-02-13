@@ -16,7 +16,7 @@ var top250 = {
   start:function(){
     var _this = this
     this.getData(function(data){
-      _this.render(data) //一开始获取数据并且
+      _this.render(data) //一开始获取数据并且渲染
     })
   },
   getData: function(callback){
