@@ -196,10 +196,10 @@
             <div class="bar-inner"></div>
           </div>
         </nav>
-        <div class="swiper-container">
-            <!-- Additional required wrapper -->
-            <div class="swiper-wrapper">
-                <!-- Slides -->
+
+        <div id="mySlides">
+          <div class="swiper-container">
+             <div class="swiper-wrapper">
                 <a href="https://sthldd.github.io/Canvas/%E7%94%BB%E6%9D%BF.html" target="_blank" class="swiper-slide"><img src="./img/1.jpg" alt="" class="swiper-slide"></a>
                 <a href="https://sthldd.github.io/Canvas/%E7%94%BB%E6%9D%BF.html" target="_blank" class="swiper-slide"><img src="./img/2.jpg" alt="" class="swiper-slide"></a>
                 <a href="https://sthldd.github.io/Canvas/%E7%94%BB%E6%9D%BF.html" target="_blank" class="swiper-slide"><img src="./img/canvas.jpg" alt="" class="swiper-slide"></a>
@@ -207,6 +207,7 @@
             <div class="swiper-pagination"></div>
             <div class="swiper-button-prev"></div>
             <div class="swiper-button-next"></div>
+          </div>
         </div>
         <script>
           portfolio1.onclick= function(){
@@ -221,12 +222,15 @@
         </script>
      
     </section>
-    <section>
-      <h2>给我留言吧QAQ</h2>
+    <section class="message">
+      <h2>留言</h2>
       <ol id="messageList"></ol>
       <form id="postMessage" style="width:700px;margin:100px auto;">
+        <label for="">姓名</label>
+        <input type="text" name="name">
+        <label for="">内容</label>
         <input type="text" name="content">
-        <input type="submit" value="哼，不理你了">
+        <input type="submit" value="快来给我留言QAQ">
       </form>
     </section>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/17.1.1/Tween.min.js"></script>
