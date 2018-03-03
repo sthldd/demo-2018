@@ -1,0 +1,23 @@
+*{margin: 0; padding: 0; box-sizing: border-box;}
+body{
+    height: 100vh;
+    background:#FEE433;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+}
+.pp{
+    border:1px solid red;
+    height:300px;
+    width:400px;
+    position: relative;
+}
+.nose{
+    height:0px;
+    width:0px;
+    position: absolute;
+    border-radius:11px;
+    border-color: black transparent transparent;
+    left:50%;
+    background: black;
+}
